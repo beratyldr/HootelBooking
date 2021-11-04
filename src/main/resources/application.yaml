@@ -1,0 +1,15 @@
+campaingDay: 10
+
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+campaingDay: 10
+
+---
+spring:
+  config:
+    activate:
+      on-profile: stage
+campaingDay: 5
