@@ -15,7 +15,6 @@ public interface HotelMapper {
 
     HotelDto toHotelDto(Hotel hotel);
     Hotel toDtoHotel(HotelDto hotelDto);
-
     List<HotelDto> toHotelDtoList(List<Hotel> hotels);
 
     Hotel createHotel(CreateUpdateHotelRequest request);

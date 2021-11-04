@@ -1,6 +1,6 @@
 package com.kodluyoruz.demo.model.entity;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,6 +11,7 @@ import org.hibernate.annotations.Where;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.Set;
 
 
 @Entity
@@ -31,4 +32,17 @@ public class Hotel extends BaseEntity {
     @Size(max=150)
     @Column(unique = true,length = 150,nullable = false)
     private String name;
+
+    @Column(nullable = false)
+    private String address;
+
+    @Column(nullable = false)
+    private int star;
+
+    @Column(nullable = false)
+    private String email;
+
+    @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)// Stop bidirectional relationship which cause a cycle.
+    @JsonIgnore
+    private Set<Room> rooms;
 }
