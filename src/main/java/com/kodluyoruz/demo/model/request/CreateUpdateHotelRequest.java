@@ -11,4 +11,7 @@ import lombok.NoArgsConstructor;
 @Builder
 public class CreateUpdateHotelRequest {
     private String name;
+    private String address;
+    private String email;
+    private int star;
 }
