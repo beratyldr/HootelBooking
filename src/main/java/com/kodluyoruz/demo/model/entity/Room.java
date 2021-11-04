@@ -1,6 +1,5 @@
 package com.kodluyoruz.demo.model.entity;
 
-import com.fasterxml.jackson.databind.ser.Serializers;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,26 +8,17 @@ import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
-
 
 @Entity
-@Table(name = "hotels")
+@Table(name = "rooms")
 @Data
 @SuperBuilder
 @AllArgsConstructor
 @NoArgsConstructor
-@SQLDelete(sql = "UPDATE hotels SET deleted = true WHERE id=?")
+@SQLDelete(sql = "UPDATE rooms SET deleted = true WHERE id=?")
 @Where(clause = "deleted=false")
-public class Hotel extends BaseEntity {
-
+public class Room extends BaseEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @NotBlank
-    @Size(max=150)
-    @Column(unique = true,length = 150,nullable = false)
-    private String name;
 }
