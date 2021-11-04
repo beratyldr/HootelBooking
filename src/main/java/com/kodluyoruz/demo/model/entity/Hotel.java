@@ -22,7 +22,7 @@ import java.util.Set;
 @NoArgsConstructor
 @SQLDelete(sql = "UPDATE hotels SET deleted = true WHERE id=?")
 @Where(clause = "deleted=false")
-public class Hotel extends BaseEntity {
+public class Hotel extends BaseEntity {// adress te il ve ilçe bilgisi olmalı
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +34,7 @@ public class Hotel extends BaseEntity {
     private String name;
 
     @Column(nullable = false)
-    private String address;
+    private String address; //private Address address;
 
     @Column(nullable = false)
     private int star;

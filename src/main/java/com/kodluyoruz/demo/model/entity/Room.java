@@ -20,7 +20,7 @@ import java.math.BigDecimal;
 @NoArgsConstructor
 @SQLDelete(sql = "UPDATE rooms SET deleted = true WHERE id=?")
 @Where(clause = "deleted=false")
-public class Room extends BaseEntity {
+public class Room extends BaseEntity {//musait gün aralığı eklenecek
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
