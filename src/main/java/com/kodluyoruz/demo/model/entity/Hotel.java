@@ -12,6 +12,7 @@ import org.hibernate.annotations.Where;
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
+import java.util.List;
 import java.util.Set;
 
 
@@ -45,5 +46,5 @@ public class Hotel extends BaseEntity {
 
     @OneToMany(mappedBy = "hotel", cascade = CascadeType.ALL)// Stop bidirectional relationship which cause a cycle.
     @JsonIgnore
-    private Set<Room> rooms;
+    private List<Room> rooms;
 }

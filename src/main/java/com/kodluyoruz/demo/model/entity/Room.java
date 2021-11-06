@@ -34,8 +34,7 @@ public class Room extends BaseEntity {//musait gün aralığı eklenecek
     @JoinColumn(name = "hotel_id", nullable = false, insertable = false, updatable = false)
     private Hotel hotel;
 
-    @NaturalId
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String roomNumber;
 
     @Column(nullable = false)

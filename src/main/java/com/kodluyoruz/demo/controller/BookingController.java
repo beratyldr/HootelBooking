@@ -22,16 +22,11 @@ import java.util.List;
 @Slf4j
 public class BookingController {
     private final BookingService bookingService;
+
     @PostMapping("/create-reservation")
     @ResponseStatus(HttpStatus.CREATED)
     public BookingDto createReservation(@RequestBody CreateUpdateBookingRequest request){
         return bookingService.createReservation(request);
-    }
-
-    @GetMapping("/rooms")
-    public List<RoomDto> getAvailableRooms(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date checkInDate,
-                                                  @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date checkOutDate){
-        return bookingService.getRooms(checkInDate,checkOutDate);
     }
 
 

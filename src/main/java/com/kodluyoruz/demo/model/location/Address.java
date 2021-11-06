@@ -16,15 +16,16 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Address {
+
+    @Column(nullable = false)
     private String province;
 
     @Column(nullable = false)
-    @NotEmpty(message = "required")
-    @NotNull(message = "required")
+    private String town;
+
     private String streetLine1;
     private String streetLine2;
-    @Column(nullable = false)
-    private String town;
+
 
 
 

@@ -21,7 +21,7 @@ public class HotelService {
         return HOTEL_MAPPER.toHotelDto(hotelRepository.save(hotel));
 
     }
-    private Hotel getHotelEntity(int id) {
+     public Hotel getHotelEntity(int id) {
         return hotelRepository.findById(id).orElseThrow(() -> new RuntimeException("not found"));
     }
     public HotelDto getHotel(int id) {
