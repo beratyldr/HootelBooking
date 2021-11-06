@@ -42,6 +42,10 @@ public class RoomService {
         return ROOM_MAPPER.toRoomDtoList(roomRepository.findAll());
     }
 
+    public void updateAvailability(Integer id,boolean available){
+        roomRepository.setAvailability(id,available);
+    }
+
     public void deleteRoom(int id) {
         roomRepository.deleteById(id);
     }

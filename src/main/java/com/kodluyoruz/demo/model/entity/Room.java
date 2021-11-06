@@ -2,6 +2,7 @@ package com.kodluyoruz.demo.model.entity;
 
 import com.kodluyoruz.demo.model.enums.RoomType;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.SuperBuilder;
@@ -11,6 +12,7 @@ import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "rooms")
@@ -43,15 +45,11 @@ public class Room extends BaseEntity {//musait gün aralığı eklenecek
     @Column(nullable = false)
     private int beds;
 
-    public Room(Long createdDate, Long lastModifiedDate, Boolean deleted, Integer id, Integer hotelId, Hotel hotel, String roomNumber, RoomType roomType, int beds) {
-        super(createdDate, lastModifiedDate, deleted);
-        this.id = id;
-        this.hotelId = hotelId;
-        this.hotel = hotel;
-        this.roomNumber = roomNumber;
-        this.roomType = roomType;
-        this.beds = beds;
-    }
+
+    @Builder.Default
+    private boolean availability=true;
+
+
 }
     /*@Column(nullable = false)
     private BigDecimal costPerNight;

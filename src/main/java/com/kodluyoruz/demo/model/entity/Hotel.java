@@ -1,6 +1,7 @@
 package com.kodluyoruz.demo.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.kodluyoruz.demo.model.location.Address;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,7 +23,7 @@ import java.util.Set;
 @NoArgsConstructor
 @SQLDelete(sql = "UPDATE hotels SET deleted = true WHERE id=?")
 @Where(clause = "deleted=false")
-public class Hotel extends BaseEntity {// adress te il ve ilçe bilgisi olmalı
+public class Hotel extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -34,7 +35,7 @@ public class Hotel extends BaseEntity {// adress te il ve ilçe bilgisi olmalı
     private String name;
 
     @Column(nullable = false)
-    private String address; //private Address address;
+    private Address address;// il ilçe ve sokak verilerinin bulunduğu ayrı bir class model/location
 
     @Column(nullable = false)
     private int star;

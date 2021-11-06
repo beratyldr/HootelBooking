@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -16,4 +17,5 @@ public class RoomDto {
     private String roomNumber;
     private RoomType roomType;
     private int beds;
+    private boolean available=true;
 }

@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.Valid;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.Objects;
@@ -17,23 +16,16 @@ import java.util.Objects;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Address {
-    private String business;
+    private String province;
 
     @Column(nullable = false)
     @NotEmpty(message = "required")
     @NotNull(message = "required")
     private String streetLine1;
-
     private String streetLine2;
-
-
     @Column(nullable = false)
-    private String suburb;
+    private String town;
 
-    @Column(nullable = false)
-    @Embedded
-    @Valid
-    private PostCode postcode;
 
 
     @Override
@@ -41,26 +33,24 @@ public class Address {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Address address = (Address) o;
-        return Objects.equals(business, address.business) &&
+        return Objects.equals(province, address.province) &&
                 Objects.equals(streetLine1, address.streetLine1) &&
                 Objects.equals(streetLine2, address.streetLine2) &&
-                Objects.equals(suburb, address.suburb) &&
-                Objects.equals(postcode, address.postcode);
+                Objects.equals(town, address.town);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(business, streetLine1, streetLine2, suburb, postcode);
+        return Objects.hash(province, streetLine1, streetLine2, town);
     }
 
     @Override
     public String toString() {
         return "Address{" +
-                "business='" + business + '\'' +
+                "province='" + province + '\'' +
                 ", streetLine1='" + streetLine1 + '\'' +
                 ", streetLine2='" + streetLine2 + '\'' +
-                ", suburb='" + suburb + '\'' +
-                ", postcode=" + postcode +
+                ", town='" + town + '\'' +
                 '}';
     }
 }
