@@ -30,8 +30,10 @@ public class SearchController {
         return searchService.getHotels(checkInDate,checkOutDate,town,province);
     }
     @GetMapping("/hotels/{id}/rooms")
-    public List<RoomDto> getAvailableRooms(@PathVariable int id){
-        return searchService.getRooms(id);
+    public List<RoomDto> getAvailableRooms(@RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date checkInDate,
+                                           @RequestParam @DateTimeFormat(pattern = "yyyy-MM-dd") Date checkOutDate,
+                                           @PathVariable int id){
+        return searchService.getRooms(checkInDate,checkOutDate,id);
     }
 
 }

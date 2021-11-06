@@ -9,6 +9,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 
@@ -19,7 +20,12 @@ public interface RoomRepository extends JpaRepository<Room, Integer> {
     @Query("update Room b set b.availability= :available where b.id= :id")
     int setAvailability(@Param("id") Integer id, @Param("available") boolean available);
 
-    @Modifying(clearAutomatically = true)
-    @Query("SELECT b FROM Room b WHERE b.hotelId=:id and b.availability=true ")
-    List<Room> getAvailableRoom(@Param("id") Integer id);
+    @Modifying
+    @Transactional
+    @Query("SELECT b FROM Room b WHERE b.hotelId=:id AND id NOT IN " +
+            "(SELECT roomId FROM Booking WHERE :start BETWEEN checkInDate AND checkOutDate " +
+            "OR :end BETWEEN checkInDate " +
+            "AND checkOutDate OR :start <= checkInDate AND :end >= checkOutDate)")
+    List<Room> getHotelRooms(@Param("start") Date from, @Param("end") Date to, @Param("id") Integer id);
+
 }

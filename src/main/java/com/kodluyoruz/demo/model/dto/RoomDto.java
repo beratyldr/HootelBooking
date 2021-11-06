@@ -17,5 +17,5 @@ public class RoomDto {
     private String roomNumber;
     private RoomType roomType;
     private int beds;
-    private boolean available=true;
+    private boolean availability;
 }

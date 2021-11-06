@@ -32,7 +32,7 @@ public class SearchService {
         return HOTEL_MAPPER.toHotelDtoList(hotelRepository.findAll());
     }
 
-    public List<RoomDto> getRooms(int id) {
-        return ROOM_MAPPER.toRoomDtoList(roomRepository.getAvailableRoom(id));
+    public List<RoomDto> getRooms(Date checkInDate,Date checkOutDate,int id) {
+        return ROOM_MAPPER.toRoomDtoList(roomRepository.getHotelRooms(checkInDate,checkOutDate,id));
     }
 }

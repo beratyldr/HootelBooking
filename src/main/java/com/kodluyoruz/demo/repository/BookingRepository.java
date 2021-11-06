@@ -24,7 +24,7 @@ public interface BookingRepository extends JpaRepository<Booking,Integer> {
             "(SELECT roomId FROM Booking WHERE :start BETWEEN checkInDate "+
             "AND checkOutDate " +
             "OR :end BETWEEN checkInDate " +
-            "AND checkOutDate))" +
+            "AND checkOutDate OR :start <= checkInDate AND :end >= checkOutDate))" +
             "AND province LIKE CONCAT('%',:prov,'%') AND town LIKE CONCAT('%',:tow,'%' ) ")
     List<Hotel> findByAvailableDateBetween(@Param("prov") String province,@Param("tow") String town,@Param("start") Date from, @Param("end") Date to);
 
