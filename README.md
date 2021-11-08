@@ -48,5 +48,10 @@ If the user makes `campaignDay` different reservations at different times and wa
 * Attention should be paid to data consistency
 
 ## Note
+* The project is almost finished
+* Create database and connect 
+* The database name should be hotelbooking and port should be 5432 (You can change in application.properties)
+* Enable @Component annotation in initializer class to run
 
-* This project can be thought of as a simple version of [hotels.com](https://tr.hotels.com/).  
+![img.png](img.png)
+   
