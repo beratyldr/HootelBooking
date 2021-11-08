@@ -44,14 +44,7 @@ public class Room extends BaseEntity {//musait gün aralığı eklenecek
     @Column(nullable = false)
     private int beds;
 
-
-    @Builder.Default
-    private boolean availability=true;
-
+    @Column(nullable = false)
+    private Double price;
 
 }
-    /*@Column(nullable = false)
-    private BigDecimal costPerNight;
-
-    @OneToOne(cascade = CascadeType.ALL)
-    private Reservation reservation;*/

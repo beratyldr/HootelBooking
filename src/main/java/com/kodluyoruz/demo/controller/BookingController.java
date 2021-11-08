@@ -1,19 +1,14 @@
 package com.kodluyoruz.demo.controller;
 
 import com.kodluyoruz.demo.model.dto.BookingDto;
-import com.kodluyoruz.demo.model.dto.RoomDto;
 import com.kodluyoruz.demo.model.request.CreateUpdateBookingRequest;
 import com.kodluyoruz.demo.service.BookingService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
-import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
 
 @Controller
 @RestController

@@ -4,9 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
+import java.util.Date;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -16,7 +16,11 @@ public class CreateUpdateBookingRequest {
 
     private Integer visitorId;
     private Integer roomId;
-    private LocalDate checkInDate;
-    private LocalDate checkOutDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date checkInDate;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date checkOutDate;
     private int day;
+
+
 }

@@ -15,10 +15,6 @@ import java.util.List;
 
 @Repository
 public interface RoomRepository extends JpaRepository<Room, Integer> {
-    @Transactional
-    @Modifying(clearAutomatically = true)
-    @Query("update Room b set b.availability= :available where b.id= :id")
-    int setAvailability(@Param("id") Integer id, @Param("available") boolean available);
 
     @Modifying
     @Transactional

@@ -15,5 +15,6 @@ public class CreateUpdateRoomRequest {
     private Integer hotelId;
     private String roomNumber;
     private RoomType roomType;
+    private Double price;
     private int beds;
 }
