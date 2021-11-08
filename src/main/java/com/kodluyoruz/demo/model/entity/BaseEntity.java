@@ -1,4 +1,5 @@
 package com.kodluyoruz.demo.model.entity;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -12,7 +13,6 @@ import javax.persistence.Column;
 import javax.persistence.EntityListeners;
 import javax.persistence.MappedSuperclass;
 import java.time.LocalDateTime;
-import java.util.Scanner;
 
 
 @Data
@@ -21,7 +21,7 @@ import java.util.Scanner;
 @SuperBuilder
 @MappedSuperclass
 @EntityListeners(AuditingEntityListener.class)
-public class BaseEntity { //
+public class BaseEntity {
     @CreatedDate
     @Column(name = "created_date")
     private LocalDateTime createdDate;

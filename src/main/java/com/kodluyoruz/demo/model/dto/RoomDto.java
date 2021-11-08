@@ -1,6 +1,5 @@
 package com.kodluyoruz.demo.model.dto;
 
-import com.kodluyoruz.demo.model.entity.Hotel;
 import com.kodluyoruz.demo.model.enums.RoomType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

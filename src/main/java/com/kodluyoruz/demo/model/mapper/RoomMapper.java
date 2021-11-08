@@ -1,10 +1,7 @@
 package com.kodluyoruz.demo.model.mapper;
 
-import com.kodluyoruz.demo.model.dto.HotelDto;
 import com.kodluyoruz.demo.model.dto.RoomDto;
-import com.kodluyoruz.demo.model.entity.Hotel;
 import com.kodluyoruz.demo.model.entity.Room;
-import com.kodluyoruz.demo.model.request.CreateUpdateHotelRequest;
 import com.kodluyoruz.demo.model.request.CreateUpdateRoomRequest;
 import org.mapstruct.Mapper;
 import org.mapstruct.MappingTarget;

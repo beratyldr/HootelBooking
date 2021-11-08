@@ -1,19 +1,15 @@
 package com.kodluyoruz.demo.repository;
 
 
-import com.kodluyoruz.demo.model.dto.RoomDto;
 import com.kodluyoruz.demo.model.entity.Booking;
 import com.kodluyoruz.demo.model.entity.Hotel;
-import com.kodluyoruz.demo.model.entity.Room;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 

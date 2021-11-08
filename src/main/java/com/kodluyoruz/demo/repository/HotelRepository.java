@@ -1,7 +1,6 @@
 package com.kodluyoruz.demo.repository;
 
 import com.kodluyoruz.demo.model.entity.Hotel;
-import com.kodluyoruz.demo.model.location.Address;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

@@ -2,10 +2,9 @@ package com.kodluyoruz.demo.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.kodluyoruz.demo.model.location.Address;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
+
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
@@ -13,7 +12,6 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.List;
-import java.util.Set;
 
 
 @Entity

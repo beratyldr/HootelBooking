@@ -21,7 +21,7 @@ import java.util.List;
 
 //@Component
 @RequiredArgsConstructor
-public class Initializer implements CommandLineRunner {
+public class Initializer implements CommandLineRunner { //create data
     private final BookingRepository bookingRepository;
     private final VisitorRepository visitorRepository;
     private final RoomRepository roomRepository;

@@ -1,7 +1,6 @@
 package com.kodluyoruz.demo.controller;
 
 import com.kodluyoruz.demo.model.dto.HotelDto;
-import com.kodluyoruz.demo.model.entity.Hotel;
 import com.kodluyoruz.demo.model.request.CreateUpdateHotelRequest;
 import com.kodluyoruz.demo.service.HotelService;
 import lombok.RequiredArgsConstructor;

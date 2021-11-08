@@ -1,9 +1,7 @@
 package com.kodluyoruz.demo.controller;
 
 import com.kodluyoruz.demo.model.dto.VisitorDto;
-import com.kodluyoruz.demo.model.entity.Visitor;
 import com.kodluyoruz.demo.model.request.CreateUpdateVisitorRequest;
-import com.kodluyoruz.demo.service.VisitorService;
 import com.kodluyoruz.demo.service.VisitorService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

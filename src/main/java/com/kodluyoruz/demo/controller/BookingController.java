@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.*;
 @Slf4j
 public class BookingController {
     private final BookingService bookingService;
-
+        //campaingDay sistemini anlayamadım şimdilik sadece rezervasyon oluşturuyoruz.
     @PostMapping("/create-reservation")
     @ResponseStatus(HttpStatus.CREATED)
     public BookingDto createReservation(@RequestBody CreateUpdateBookingRequest request){

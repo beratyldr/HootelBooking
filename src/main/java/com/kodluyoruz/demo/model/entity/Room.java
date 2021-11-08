@@ -1,18 +1,12 @@
 package com.kodluyoruz.demo.model.entity;
 
 import com.kodluyoruz.demo.model.enums.RoomType;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lombok.experimental.SuperBuilder;
-import org.hibernate.annotations.NaturalId;
 import org.hibernate.annotations.SQLDelete;
 import org.hibernate.annotations.Where;
 
 import javax.persistence.*;
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "rooms")
@@ -22,7 +16,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @SQLDelete(sql = "UPDATE rooms SET deleted = true WHERE id=?")
 @Where(clause = "deleted=false")
-public class Room extends BaseEntity {//musait gün aralığı eklenecek
+public class Room extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;

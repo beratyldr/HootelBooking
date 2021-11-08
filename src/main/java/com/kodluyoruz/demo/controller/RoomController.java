@@ -1,10 +1,7 @@
 package com.kodluyoruz.demo.controller;
 
-import com.kodluyoruz.demo.model.dto.HotelDto;
 import com.kodluyoruz.demo.model.dto.RoomDto;
-import com.kodluyoruz.demo.model.request.CreateUpdateHotelRequest;
 import com.kodluyoruz.demo.model.request.CreateUpdateRoomRequest;
-import com.kodluyoruz.demo.service.HotelService;
 import com.kodluyoruz.demo.service.RoomService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

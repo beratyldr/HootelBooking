@@ -3,7 +3,6 @@ package com.kodluyoruz.demo.service;
 import com.kodluyoruz.demo.model.dto.HotelDto;
 import com.kodluyoruz.demo.model.dto.RoomDto;
 import com.kodluyoruz.demo.model.entity.Hotel;
-import com.kodluyoruz.demo.model.entity.Room;
 import com.kodluyoruz.demo.repository.BookingRepository;
 import com.kodluyoruz.demo.repository.HotelRepository;
 import com.kodluyoruz.demo.repository.RoomRepository;
